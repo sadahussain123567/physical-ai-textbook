@@ -1,0 +1,117 @@
+# Textbook API Contracts
+# For future RAG and personalization features (not currently implemented)
+
+openapi: 3.0.0
+info:
+  title: Physical AI & Humanoid Robotics Textbook API
+  version: 1.0.0
+  description: API contracts for future textbook enhancements (RAG, personalization, etc.)
+
+paths:
+  /api/chapters:
+    get:
+      summary: Get list of all textbook chapters
+      responses:
+        '200':
+          description: List of chapters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Chapter'
+
+  /api/chapters/{chapterId}:
+    get:
+      summary: Get specific chapter content
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Chapter content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chapter'
+
+components:
+  schemas:
+    Chapter:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the chapter
+        slug:
+          type: string
+          description: URL-friendly identifier for the chapter
+        title:
+          type: string
+          description: Display title of the chapter
+        module:
+          type: integer
+          description: Module number this chapter belongs to
+        week:
+          type: integer
+          description: Week number within the module
+        content:
+          type: string
+          description: The main content of the chapter in MDX format
+        codeExamples:
+          type: array
+          items:
+            $ref: '#/components/schemas/CodeExample'
+        visualElements:
+          type: array
+          items:
+            $ref: '#/components/schemas/VisualElement'
+        learningObjectives:
+          type: array
+          items:
+            type: string
+        prerequisites:
+          type: array
+          items:
+            type: string
+
+    CodeExample:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the code example
+        language:
+          type: string
+          description: Programming language of the example
+        code:
+          type: string
+          description: The actual code content
+        description:
+          type: string
+          description: Brief explanation of what the code does
+        executable:
+          type: boolean
+          description: Whether this code example can be run/tested
+
+    VisualElement:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the visual element
+        type:
+          type: string
+          description: Type of visual element (diagram, screenshot, flowchart, mermaid)
+        src:
+          type: string
+          description: Source path or URL for the visual element
+        alt:
+          type: string
+          description: Alternative text for accessibility
+        caption:
+          type: string
+          description: Caption for the visual element

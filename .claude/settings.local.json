@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(pwsh -Command \".specify/scripts/powershell/create-new-feature.ps1 -Json -Number 1 -ShortName ''physical-ai-textbook'' -FeatureDescription ''Create the definitive, production-grade, interactive textbook that fully teaches the entire \"\"Physical AI & Humanoid Robotics\"\" curriculum. The book must feel modern, code-rich, visually clear, and engineered from the ground up to support future AI-native extensions (personalization, Urdu translation, etc.)''\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
+      "Bash(dir)",
+      "Bash(npx create-docusaurus@latest docs classic)",
+      "Bash(npx create-docusaurus@latest docs classic --typescript false)",
+      "Bash(node --version)",
+      "Bash(powershell -Command \"Get-ChildItem false\")",
+      "Bash(npx create-docusaurus@latest website classic --typescript false)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(git add .)"
+    ]
+  }
+}

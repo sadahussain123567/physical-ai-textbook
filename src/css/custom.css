@@ -1,0 +1,160 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Custom colors for textbook */
+  --textbook-ros-color: #ff6600;
+  --textbook-isaac-color: #00aaff;
+  --textbook-unity-color: #00aaff;
+  --textbook-gazebo-color: #00aa00;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode custom colors for textbook */
+  --textbook-ros-color: #ff8833;
+  --textbook-isaac-color: #33ccff;
+  --textbook-unity-color: #33ccff;
+  --textbook-gazebo-color: #33cc33;
+}
+
+/* Mermaid theme customization for dark/light mode */
+.mermaid {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+[data-theme='light'] .mermaid svg {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .mermaid svg {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+/* Mobile-responsive layout */
+@media (max-width: 768px) {
+  .theme-doc-markdown {
+    padding: 0 1rem;
+  }
+
+  .code-block {
+    font-size: 0.85rem;
+  }
+}
+
+/* Custom textbook components styling */
+.callout {
+  padding: 1rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 0 4px 4px 0;
+  margin: 1.5rem 0;
+}
+
+.callout-info {
+  border-left-color: #2980b9;
+  background-color: rgba(41, 128, 185, 0.1);
+}
+
+.callout-warning {
+  border-left-color: #f39c12;
+  background-color: rgba(243, 156, 18, 0.1);
+}
+
+.callout-danger {
+  border-left-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.ros-command {
+  background-color: rgba(255, 102, 0, 0.1);
+  border: 1px solid var(--textbook-ros-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-family: var(--ifm-font-family-monospace);
+  margin: 1rem 0;
+}
+
+.isaac-tip {
+  background-color: rgba(0, 170, 255, 0.1);
+  border: 1px solid var(--textbook-isaac-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.hardware-spec {
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9em;
+}
+
+/* Code block scrolling for mobile */
+.prism-code {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Collapsible code block styling */
+.collapsible-code {
+  margin: 1rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+}
+
+.collapsible-code-header {
+  background-color: var(--ifm-color-emphasis-200);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible-code-content {
+  display: none;
+}
+
+.collapsible-code.expanded .collapsible-code-content {
+  display: block;
+}
+
+/* Responsive code blocks */
+.theme-code-block {
+  overflow-x: auto;
+  max-width: 100%;
+}

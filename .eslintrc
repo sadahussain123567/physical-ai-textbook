@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "@docusaurus",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.mdx", "**/*.md"],
+      "extends": ["plugin:mdx/recommended"],
+      "settings": {
+        "mdx/code-block": true
+      }
+    }
+  ]
+}
