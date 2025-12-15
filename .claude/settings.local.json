@@ -11,7 +11,10 @@
       "Bash(powershell -Command \"Get-ChildItem false\")",
       "Bash(npx create-docusaurus@latest website classic --typescript false)",
       "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
-      "Bash(git add .)"
+      "Bash(git add .)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit for Physical AI & Humanoid Robotics Textbook\n\n- Set up Docusaurus documentation site\n- Added textbook content for modules on Physical AI and humanoid robotics\n- Created comprehensive curriculum covering ROS 2, NVIDIA Isaac, and robotics simulation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh --version)",
+      "Bash(git add .github/workflows/github-pages.yml)"
     ]
   }
 }
