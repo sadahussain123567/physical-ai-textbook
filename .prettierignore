@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+.dist/
+_dist/
+.DS_Store
+
+# Logs
+*.log
+
+# Environment variables
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docusaurus
+.docusaurus/
+.cache/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?

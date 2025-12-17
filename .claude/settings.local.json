@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(pwsh -Command \".specify/scripts/powershell/create-new-feature.ps1 -Json -Number 1 -ShortName ''physical-ai-textbook'' -FeatureDescription ''Create the definitive, production-grade, interactive textbook that fully teaches the entire \"\"Physical AI & Humanoid Robotics\"\" curriculum. The book must feel modern, code-rich, visually clear, and engineered from the ground up to support future AI-native extensions (personalization, Urdu translation, etc.)''\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
+      "Bash(dir)",
+      "Bash(npx create-docusaurus@latest docs classic)",
+      "Bash(npx create-docusaurus@latest docs classic --typescript false)",
+      "Bash(node --version)",
+      "Bash(powershell -Command \"Get-ChildItem false\")",
+      "Bash(npx create-docusaurus@latest website classic --typescript false)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(git add .)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit for Physical AI & Humanoid Robotics Textbook\n\n- Set up Docusaurus documentation site\n- Added textbook content for modules on Physical AI and humanoid robotics\n- Created comprehensive curriculum covering ROS 2, NVIDIA Isaac, and robotics simulation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh --version)",
+      "Bash(git add .github/workflows/github-pages.yml)",
+      "Bash(git push -u origin master:main)",
+      "Bash(git fetch origin)",
+      "Bash(npx vercel --version)",
+      "Bash(npm run build)"
+    ]
+  }
+}
