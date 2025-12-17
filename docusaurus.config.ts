@@ -15,17 +15,17 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-github-username.github.io',
+  url: 'https://sadahussain123567.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // For GitHub Pages deployment, use the project name
   baseUrl: '/physical-ai-textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-github-username', // Usually your GitHub org/user name.
+  organizationName: 'sadahussain123567', // Usually your GitHub org/user name.
   projectName: 'physical-ai-textbook', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-github-username/physical-ai-textbook/edit/main/',
+            'https://github.com/sadahussain123567/physical-ai-textbook/edit/main/',
         },
         blog: false, // Disable blog for textbook
         theme: {
@@ -74,7 +74,7 @@ const config: Config = {
           label: 'Textbook',
         },
         {
-          href: 'https://github.com/your-github-username/physical-ai-textbook',
+          href: 'https://github.com/sadahussain123567/physical-ai-textbook',
           label: 'GitHub',
           position: 'right',
         },
@@ -110,7 +110,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/your-github-username/physical-ai-textbook',
+              href: 'https://github.com/sadahussain123567/physical-ai-textbook',
             },
           ],
         },
